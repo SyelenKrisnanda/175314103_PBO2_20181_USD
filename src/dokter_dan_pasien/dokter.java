@@ -13,6 +13,7 @@ public class dokter {
     
     private String nomorPegawai, nama, alamat, tempat_lahir;
     private int bulan_lahir, tahun_lahir;
+       private int tanggal_lahir;
     
     public dokter() {
         
@@ -47,7 +48,7 @@ public class dokter {
         }
         
     }
-    private int tanggal_lahir;
+ 
     
     public String getNomorPegawai() {
         return nomorPegawai;

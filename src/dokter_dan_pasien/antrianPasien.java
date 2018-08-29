@@ -11,6 +11,8 @@ package dokter_dan_pasien;
  */
 public class antrianPasien {
     private int tanggalAntrian, BulanAntrian, tahunAntiran;
+private pasien DaftarPasien[];
+  private Klinik klinik;
 
     public int getTanggalAntrian() {
         return tanggalAntrian;
@@ -24,7 +26,7 @@ public class antrianPasien {
         return BulanAntrian;
     }
     
-    public void setBulan_lahir(int bulanAntrian) throws Exception {
+    public void setBulanAntrian(int bulanAntrian) throws Exception {
         if (BulanAntrian<= 12) {
             this.BulanAntrian = bulanAntrian;
         } else {
@@ -35,16 +37,21 @@ public class antrianPasien {
         return tahunAntiran;
     }
 
-    public void setTahunAntiran(int tahunAntiran) {
-        this.tahunAntiran = tahunAntiran;
+    public void setTahunAntiran(int tahunAntrian) throws Exception {
+     if (tahunAntrian >0){
+            this.tahunAntiran = tahunAntiran;
+        }else{
+            throw new Exception ("eror");
+        }
+        
     }
 
-    public String getDaftarPasien() {
-        return DaftarPasien;
+    public pasien getDaftarPasien() {
+        return DaftarPasien[3];
     }
 
-    public void setDaftarPasien(String DaftarPasien) {
-        this.DaftarPasien = DaftarPasien;
+    public void setDaftarPasien(pasien DaftarPasien) {
+        this.DaftarPasien[3] = DaftarPasien;
     }
 
     public Klinik getKlinik() {
@@ -54,6 +61,6 @@ public class antrianPasien {
     public void setKlinik(Klinik klinik) {
         this.klinik = klinik;
     }
-    private String DaftarPasien;
-    private Klinik klinik;
+    
+  
 }
