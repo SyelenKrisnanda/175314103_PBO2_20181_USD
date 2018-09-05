@@ -10,8 +10,10 @@ package VIEW;
  * @author admin
  */
 public class test {
+
     public static void main(String[] args) {
         DaftarAntrianDialog test = new DaftarAntrianDialog();
-        test.setSize(300,400);
+        test.setSize(300, 400);
         test.setVisible(true);
-}}
+    }
+}

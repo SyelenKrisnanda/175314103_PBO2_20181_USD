@@ -10,10 +10,10 @@ package VIEW;
  * @author admin
  */
 public class testnew {
-   
+
     public static void main(String[] args) {
         DaftarAntrianBaru test = new DaftarAntrianBaru();
-        test.setSize(300,400);
+        test.setSize(300, 400);
         test.setVisible(true);
-}}
-
+    }
+}
