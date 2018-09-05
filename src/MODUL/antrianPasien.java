@@ -14,7 +14,7 @@ public class antrianPasien {
     private int bulanAntrian; // membuat variable bertipe data int dan bersifat private
     private int tahunAntrian; // membuat variable bertipe data int dan bersifat private
       private Klinik klinik; // membuat variable bertipe data klinik dan bersifat private
-    private dokter_dan_pasien.pasien daftarPasien[]; // membuat variable bertipe data pasien dan bersifat private
+    private pasien daftarPasien[]; // membuat variable bertipe data pasien dan bersifat private
     
 
     /**
@@ -53,11 +53,11 @@ public class antrianPasien {
         this.klinik = Klinik;
     }
 
-    public dokter_dan_pasien.pasien[] getDaftarPasien() {//membuat method bernama getDaftarPasien yang akan mereturn variabel bertipe data pasien[]
+    public pasien[] getDaftarPasien() {//membuat method bernama getDaftarPasien yang akan mereturn variabel bertipe data pasien[]
         return daftarPasien;
     }
 
-    public void setDaftarPasien(dokter_dan_pasien.pasien[] daftarPasien) {//membuat method void bernama setDaftarPasien dengan parameter variabel daftarPasien bertipe data pasien[]
+    public void setDaftarPasien(pasien[] daftarPasien) {//membuat method void bernama setDaftarPasien dengan parameter variabel daftarPasien bertipe data pasien[]
         this.daftarPasien = daftarPasien;
     }
   
