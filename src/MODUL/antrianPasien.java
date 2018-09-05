@@ -10,57 +10,55 @@ package MODUL;
  * @author admin
  */
 public class antrianPasien {
-    private int tanggalAntrian, BulanAntrian, tahunAntiran;
-private pasien DaftarPasien[];
-  private Klinik klinik;
+    private int tanggalAntrian; // membuat variable bertipe data int dan bersifat private
+    private int bulanAntrian; // membuat variable bertipe data int dan bersifat private
+    private int tahunAntrian; // membuat variable bertipe data int dan bersifat private
+      private Klinik klinik; // membuat variable bertipe data klinik dan bersifat private
+    private dokter_dan_pasien.pasien daftarPasien[]; // membuat variable bertipe data pasien dan bersifat private
+    
 
-    public int getTanggalAntrian() {
+    /**
+     * 
+     * @return 
+     */
+    public int getTanggalAntrian() {//membuat method bernama getTanggalAntrian yang akan mereturn variabel bertipe data int
         return tanggalAntrian;
     }
 
-    public void setTanggalAntrian(int tanggalAntrian) {
+    public void setTanggalAntrian(int tanggalAntrian) {//membuat method void bernama setTanggalAntrian dengan parameter variabel tanggalAntrian bertipe data int
         this.tanggalAntrian = tanggalAntrian;
     }
 
-    public int getBulanAntrian() {
-        return BulanAntrian;
-    }
-    
-    public void setBulanAntrian(int bulanAntrian) throws Exception {
-        if (BulanAntrian<= 12) {
-            this.BulanAntrian = bulanAntrian;
-        } else {
-            throw new Exception("eror");
-        }
-    }
-    public int getTahunAntiran() {
-        return tahunAntiran;
+    public int getBulanAntrian() {//membuat method bernama getBulanAntrian yang akan mereturn variabel bertipe data int
+        return bulanAntrian;
     }
 
-    public void setTahunAntiran(int tahunAntrian) throws Exception {
-     if (tahunAntrian >0){
-            this.tahunAntiran = tahunAntiran;
-        }else{
-            throw new Exception ("eror");
-        }
-        
+    public void setBulanAntrian(int bulanAntrian) {//membuat method void bernama setBulanAntrian dengan parameter variabel bulanAntrian bertipe data int
+        this.bulanAntrian = bulanAntrian;
     }
 
-    public pasien getDaftarPasien() {
-        return DaftarPasien[3];
+    public int getTahunAntrian() {//membuat method bernama geTahunAntrian yang akan mereturn variabel bertipe data int
+        return tahunAntrian;
     }
 
-    public void setDaftarPasien(pasien DaftarPasien) {
-        this.DaftarPasien[3] = DaftarPasien;
+    public void setTahunAntrian(int tahunAntrian) {//membuat method void bernama setTahunAntrian dengan parameter variabel tahunAntrian bertipe data int
+        this.tahunAntrian = tahunAntrian;
     }
 
-    public Klinik getKlinik() {
+    public Klinik getklinik() {//membuat method bernama getKlinik yang akan mereturn variabel bertipe data klinik
         return klinik;
     }
 
-    public void setKlinik(Klinik klinik) {
-        this.klinik = klinik;
+    public void setklinik(Klinik Klinik) {//membuat method void bernama setKlinik dengan parameter variabel Klinik bertipe data klinik
+        this.klinik = Klinik;
     }
-    
+
+    public dokter_dan_pasien.pasien[] getDaftarPasien() {//membuat method bernama getDaftarPasien yang akan mereturn variabel bertipe data pasien[]
+        return daftarPasien;
+    }
+
+    public void setDaftarPasien(dokter_dan_pasien.pasien[] daftarPasien) {//membuat method void bernama setDaftarPasien dengan parameter variabel daftarPasien bertipe data pasien[]
+        this.daftarPasien = daftarPasien;
+    }
   
 }

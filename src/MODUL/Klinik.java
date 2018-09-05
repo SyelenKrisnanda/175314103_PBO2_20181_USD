@@ -10,27 +10,28 @@ package MODUL;
  * @author admin
  */
 public class Klinik {
-    private int idKlinik;
 
-    public int getIdKlinik() {
-        return idKlinik;
-    }
+    private String Nama;// membuat variable bertipe data Sting dan bersifat private
+    private int idKlinik;// membuat variabel bertipe data int dan bersifat iprivate
 
-    public void setIdKlinik(int idKlinik) throws Exception {
-        if (idKlinik > 6){
-              this.idKlinik = idKlinik;
-        }else{
-            throw new Exception ("eror");
-        }
-      
-    }
-
-    public String getNama() {
+    public String getNama() {//membuat method bernama getNama yang akan mereturn variabel bertipe data String
         return Nama;
     }
 
-    public void setNama(String Nama) {
+    public void setNama(String Nama) {//membuat method void bernama setNama dengan parameter variabel nama bertipe data String
         this.Nama = Nama;
     }
-    private String Nama;
+
+    public int getIdKlinik() {//membuat method bernama getIdKlinik yang akan mereturn variabel bertipe data int
+        return idKlinik;
+    }
+
+    public void setIdKlinik(int idKlinik) throws Exception { // Membuat method bernama setIdKlinik dengan parameter variable idKlinik bertipe data int dengan menambahkan eception
+        if (idKlinik > 6) {
+            this.idKlinik = idKlinik;
+        } else {
+            throw new Exception("eror");
+        }
+
+    }
 }
