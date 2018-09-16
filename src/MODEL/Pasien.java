@@ -138,7 +138,7 @@ public class Pasien {
     public String buatNomorRekamMedis() {//membuat method bernama buatNomorRekamMedis yang akan mereturn variabel bertipe data String
         // pada method ini berfungsi untuk menampilkan data tahun,bulan, dan tanggal pada hari itu serta menampilkan 3 huruf depan pasien
         String nomorRekamMedis;
-
+        
         nomorRekamMedis = nik;
         return nomorRekamMedis;
     }

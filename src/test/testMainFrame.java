@@ -4,18 +4,19 @@
  * and open the template in the editor.
  */
 package test;
-
-import VIEW.DaftarAntrianBaru;
-
+import VIEW.mainFrame;
+import javax.swing.JFrame;
 /**
- *
- * @author admin
+ * 
+ * @author lenovo
  */
-public class testnew {
-
-    public static void main(String[] args) {
-        DaftarAntrianBaru test = new DaftarAntrianBaru();
+ 
+ 
+public class testMainFrame {
+     public static void main(String[] args) {
+        mainFrame test = new mainFrame();
         test.setSize(400, 500);
         test.setVisible(true);
-    }
+    test.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+}
 }
