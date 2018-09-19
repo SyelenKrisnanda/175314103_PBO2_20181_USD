@@ -76,7 +76,7 @@ public final class DaftarAntrianDialog extends JDialog implements ActionListener
         saveButton = new JButton("Simpan");// membuat tombol Simpan
         saveButton.setBounds(115, 300, 100, 40);// dengan ukuran x=115 dan y=300 serta panjang=100 dan tinggi=40
         this.add(saveButton);
-        
+
     }
 
     @Override

@@ -51,6 +51,8 @@ public class tambahPasien extends JDialog implements ActionListener{
         "1986", "1987", "1988", "1989", "1990", "1991", "1992", "1993", "1994",
         "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002"};
     private JTextField namaText;
+    private JTextField nikText;
+    private JTextField alamatText;
     private JButton saveButton;
 
     public tambahPasien() {
@@ -75,9 +77,9 @@ public class tambahPasien extends JDialog implements ActionListener{
         nik.setBounds(15, 80, 100, 25); //dengan ukuran x=15 dan y=80 serta panjang=100 dan tinggi=25
         this.add(nik);
 
-        namaText = new JTextField();// untuk membuat kotak teks
-        namaText.setBounds(115, 80, 180, 25);//dengan ukuran x=115 dan y=80 serta panjang=180 dan tinggi=25
-        this.add(namaText);
+        nikText = new JTextField();// untuk membuat kotak teks
+        nikText.setBounds(115, 80, 180, 25);//dengan ukuran x=115 dan y=80 serta panjang=180 dan tinggi=25
+        this.add(nikText);
 
         this.setLayout(null);
         namaLabel = new JLabel("Nama");// membuat label Nama
@@ -93,9 +95,9 @@ public class tambahPasien extends JDialog implements ActionListener{
         alamat.setBounds(15, 180, 100, 25);//dengan ukuran x=15 dan y=180 serta panjang=100 dan tinggi=25
         this.add(alamat);
 
-        namaText = new JTextField();// untuk membuat kotak teks
-        namaText.setBounds(115, 180, 180, 80);//dengan ukuran x=115 dan y=180 serta panjang=180 dan tinggi=80
-        this.add(namaText);
+        alamatText = new JTextField();// untuk membuat kotak teks
+        alamatText.setBounds(115, 180, 180, 80);//dengan ukuran x=115 dan y=180 serta panjang=180 dan tinggi=80
+        this.add(alamatText);
         
         jenisKelamin= new JLabel("Jenis Kelamin ");// membuat label Jenis Kelamin
          jenisKelamin.setBounds(15, 280, 100, 20);//dengan ukuran x=15 dan y=280 serta panjang=100 dan tinggi=20
@@ -154,6 +156,7 @@ public class tambahPasien extends JDialog implements ActionListener{
         saveButton = new JButton("Simpan");// membuat tombol Simpan
         saveButton.setBounds(120, 460, 100, 40);  //dengan  Ukuran x = 120, y = 460 dan panjang = 100 tinggi 40
         this.add(saveButton);
+        saveButton.addActionListener(this);
         
         
     }

@@ -23,9 +23,10 @@ public class DaftarAntrianBaru extends JDialog implements ActionListener {
 
     private JLabel judulLabel;
     private JLabel namaLabel;
-    private JLabel alamat;
-    private JLabel noRMLabel;
-    private JTextField noRMText;
+    private JLabel alamatLabel;
+    private JLabel nikLabel;
+    private JTextField namaText;
+    private JTextField nikText;
     private JTextField alamatText;
      private JLabel tanggalLahirLabel;
     private JLabel bulanLahirLabel;
@@ -43,7 +44,6 @@ public class DaftarAntrianBaru extends JDialog implements ActionListener {
         "1976", "1977", "1978", "1979", "1980", "1981", "1982", "1983", "1984", "1985",
         "1986", "1987", "1988", "1989", "1990", "1991", "1992", "1993", "1994",
         "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002"};
-    private JTextField namaText;
     private JButton saveButton;
 
     public DaftarAntrianBaru() {
@@ -62,8 +62,17 @@ public class DaftarAntrianBaru extends JDialog implements ActionListener {
     public void init() {
         this.setLayout(null);
         judulLabel = new JLabel("DAFTAR PASIEN BARU");// membuat Label "DAFTAR PASIEN BARU"
-        judulLabel.setBounds(100, 35, 200, 25);// dengan ukuran x=100 dan y=35 serta panjang=200 dan tinggi=25
+        judulLabel.setBounds(100, 5, 200, 25);// dengan ukuran x=100 dan y=35 serta panjang=200 dan tinggi=25
         this.add(judulLabel);
+        
+        this.setLayout(null);
+        nikLabel = new JLabel ("NIK");
+        nikLabel.setBounds(15, 30, 100, 25);
+        this.add(nikLabel);
+        
+        nikText = new JTextField();
+        nikText.setBounds(115, 30, 100, 25);
+        this.add(nikText);
 
         this.setLayout(null);
         namaLabel = new JLabel("Nama");// membuat label "Nama"
@@ -75,9 +84,9 @@ public class DaftarAntrianBaru extends JDialog implements ActionListener {
         this.add(namaText);
 
         this.setLayout(null);
-        alamat = new JLabel("Alamat");// membuat label "Alamat"
-        alamat.setBounds(15, 130, 100, 25);// dengan ukuran x=15 dan y=130 serta panjang=100 dan tinggi=25
-        this.add(alamat);
+        alamatLabel = new JLabel("Alamat");// membuat label "Alamat"
+        alamatLabel.setBounds(15, 130, 100, 25);// dengan ukuran x=15 dan y=130 serta panjang=100 dan tinggi=25
+        this.add(alamatLabel);
 
         namaText = new JTextField();// untuk membuat kotak teks
         namaText.setBounds(115, 130, 180, 80);// dengan ukuran x=115 dan y=130 serta panjang=180 dan tinggi=80
@@ -115,18 +124,19 @@ public class DaftarAntrianBaru extends JDialog implements ActionListener {
         saveButton = new JButton("Simpan");// membuat tombol Simpan
         saveButton.setBounds(115, 350, 100, 40);// dengan ukuran x=115 dan y=350 serta panjang=100 dan tinggi=40
         this.add(saveButton);
+        saveButton.addActionListener(this);
     }
 
     @Override
     public void actionPerformed(ActionEvent ae) {
         // sebagai perbandingan apabila yang di klik adalah noRMText
-        if (ae.getSource() == noRMText) {
+        if (ae.getSource() == nikText) {
             //mencari object pasien berdasarakan noRM
-            Pasien cari = Pasien.cariPasien(noRMText.getText());
+            Pasien cari = Pasien.cariPasien(nikText.getText());
             //perbandingan apabila object cari sama dengan null
             if (cari == null) {
                 // menampilkan text pada jendela dialog
-                JOptionPane.showMessageDialog(null, "Data Pasien " + noRMText.getText() + " Tidak Ada");
+                JOptionPane.showMessageDialog(null, "Data Pasien " + nikText.getText() + " Tidak Ada");
             } else {
                 //mengset namatext dengan data dari variabel nama dari object cari
                 namaText.setText(cari.getNama());
@@ -137,7 +147,7 @@ public class DaftarAntrianBaru extends JDialog implements ActionListener {
         // perbandingan apabila yang di klik adalah antriButton
         if (ae.getSource() == saveButton) {
             //mencari object pasien berdasarakan noRM
-            Pasien cari = Pasien.cariPasien(noRMText.getText());
+            Pasien cari = Pasien.cariPasien(nikText.getText());
             //perulangan sebanyak indeks pada daftarpasien
             for (int i = 0; i < Pasien.daftarPasienKlinik.size(); i++) {
                 //perbandingan apabila object cari sama dengan object dari daftar pasie indeks ke i

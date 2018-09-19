@@ -148,16 +148,11 @@ public class Pasien {
     }
 
     public static Pasien cariPasien(String noRekamMedis) {
-        boolean found = false;
-        Pasien result = null;
-
-        for (int i = 0; i < daftarPasienKlinik.size() && found == false; i++) {
+        for (int i = 0; i < daftarPasienKlinik.size(); i++) {
             if (daftarPasienKlinik.get(i).nik.equals(noRekamMedis)) {
-                found = true;
-                result = daftarPasienKlinik.get(i);
-
+                return daftarPasienKlinik.get(i);
             }
         }
-        return result;
+        return null;
     }
 }
