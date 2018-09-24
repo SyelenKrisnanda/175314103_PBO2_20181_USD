@@ -59,7 +59,7 @@ import javax.swing.JMenuItem;
     @Override
     public void actionPerformed(ActionEvent ae) {
         if (ae.getSource()== tambahPasienMenu) {
-            DaftarAntrianBaru test = new DaftarAntrianBaru ("FORM PASIEN");// membuat judul pada form yaitu FORM PASIEN
+            DaftarAntrianPasien test = new DaftarAntrianPasien ("FORM PASIEN");// membuat judul pada form yaitu FORM PASIEN
             test.setSize(400,450); //dengan ukuran x=400 dan y= 450
             test.setVisible(true);
         }

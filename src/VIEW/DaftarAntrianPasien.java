@@ -19,7 +19,7 @@ import javax.swing.JTextField;
  *
  * @author admin
  */
-public class DaftarAntrianBaru extends JDialog implements ActionListener {
+public class DaftarAntrianPasien extends JDialog implements ActionListener {
 
     private JLabel judulLabel;
     private JLabel namaLabel;
@@ -46,7 +46,7 @@ public class DaftarAntrianBaru extends JDialog implements ActionListener {
         "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002"};
     private JButton saveButton;
 
-    public DaftarAntrianBaru() {
+    public DaftarAntrianPasien() {
         //sebagai konstruktor yang memmanggil method init
         init();
     }
@@ -54,7 +54,7 @@ public class DaftarAntrianBaru extends JDialog implements ActionListener {
  * 
  * @param title 
  */
-    public DaftarAntrianBaru(String title) {
+    public DaftarAntrianPasien(String title) {
         this.setTitle(title);
         init();
     }
@@ -149,9 +149,9 @@ public class DaftarAntrianBaru extends JDialog implements ActionListener {
             //mencari object pasien berdasarakan noRM
             Pasien cari = Pasien.cariPasien(nikText.getText());
             //perulangan sebanyak indeks pada daftarpasien
-            for (int i = 0; i < Pasien.daftarPasienKlinik.size(); i++) {
+            for (int i = 0; i < Pasien.tambahPasienBaru.size(); i++) {
                 //perbandingan apabila object cari sama dengan object dari daftar pasie indeks ke i
-                if (cari == Pasien.daftarPasienKlinik.get(i)) {
+                if (cari == Pasien.tambahPasienBaru.get(i)) {
                     // menampilkan text pada jendela dialog
                     JOptionPane.showMessageDialog(null, "Nomor Antrian Anda : " + (i + 1));
                     //method agar jdialog langsung keluar 

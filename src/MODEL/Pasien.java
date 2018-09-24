@@ -17,7 +17,15 @@ public class Pasien {
 
     private String noRekamMedis,nama, alamat, tempat_lahir, nik;// membuat variable bertipe data Sting dan bersifat private
     private int  tanggal_lahir, bulan_lahir, tahun_lahir;// membuat variable bertipe data int dan bersifat private
-    public static ArrayList<Pasien> daftarPasienKlinik = new ArrayList<Pasien>();
+    public static ArrayList<Pasien> tambahPasienBaru = new ArrayList<Pasien>();
+
+    public static ArrayList<Pasien> getTambahPasienBaru() {
+        return tambahPasienBaru;
+    }
+
+    public static void setTambahPasienBaru(ArrayList<Pasien> tambahPasienBaru) {
+        Pasien.tambahPasienBaru = tambahPasienBaru;
+    }
 
     public Pasien(String nama, String alamat, String tempat_lahir, int tanggal_lahir, int bulan_lahir, int tahun_lahir, String nik) {
         this.nama = nama;
@@ -29,13 +37,7 @@ public class Pasien {
         this.nik = nik;
     }
 
-    public ArrayList<Pasien> getDaftarPasienKlinik() {
-        return daftarPasienKlinik;
-    }
-
-    public void setDaftarPasienKlinik(ArrayList<Pasien> daftarPasienKlinik) {
-        this.daftarPasienKlinik = daftarPasienKlinik;
-    }
+   
 
     public String getNik() {
         return nik;
@@ -143,14 +145,15 @@ public class Pasien {
         return nomorRekamMedis;
     }
 
-    public static void daftarPasienKlinik(Pasien pasien) {
-        daftarPasienKlinik.add(pasien);
+    public static void tambahPasienBaru(Pasien pasien) {
+        tambahPasienBaru.add(pasien);
     }
+    
 
     public static Pasien cariPasien(String noRekamMedis) {
-        for (int i = 0; i < daftarPasienKlinik.size(); i++) {
-            if (daftarPasienKlinik.get(i).nik.equals(noRekamMedis)) {
-                return daftarPasienKlinik.get(i);
+        for (int i = 0; i < tambahPasienBaru.size(); i++) {
+            if (tambahPasienBaru.get(i).noRekamMedis.equalsIgnoreCase(noRekamMedis)) {
+                return tambahPasienBaru.get(i);
             }
         }
         return null;

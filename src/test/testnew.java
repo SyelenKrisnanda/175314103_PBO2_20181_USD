@@ -5,7 +5,7 @@
  */
 package test;
 
-import VIEW.DaftarAntrianBaru;
+import VIEW.DaftarAntrianPasien;
 
 /**
  *
@@ -14,7 +14,7 @@ import VIEW.DaftarAntrianBaru;
 public class testnew {
 
     public static void main(String[] args) {
-        DaftarAntrianBaru test = new DaftarAntrianBaru();
+        DaftarAntrianPasien test = new DaftarAntrianPasien();
         test.setSize(400, 500);
         test.setVisible(true);
     }
