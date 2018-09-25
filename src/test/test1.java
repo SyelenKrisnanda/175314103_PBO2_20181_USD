@@ -35,10 +35,10 @@ public class test1 {
         );
 
     Pasien.daftarPasienKlinik(test);
-        Pasien.daftarPasienKlinik(test1);
+        Pasien.daftarPasienKlinik(test;
 
-        for (int i = 0; i < Pasien.tambahPasienBaru.size(); i++) {
-            System.out.println("Nama : " + Pasien.tambahPasienBaru.get(i).getNama());
+        for (int i = 0; i < Pasien.daftarPasienKlinik.size(); i++) {
+            System.out.println("Nama : " + Pasien.daftarPasienKlinik.get(i).getNama());
         }
 
         Pasien cari = Pasien.cariPasien("19990110");

@@ -173,7 +173,7 @@ public class tambahPasien extends JDialog implements ActionListener{
             //mengset variabel nik untuk object baru
             data.setNik(nik.getText());
             //menambahkan object baru ke daftarpasien melalui method tambahpasienbaru
-            Pasien.daftarPasienKlinik(data);
+            Pasien.daftarPasienKlinik.add(data);
             //menampilkan pesan 
             JOptionPane.showMessageDialog(null, "Data Anda Telah Ditambahkan");
             //method agar jdialog langsung keluar  

@@ -149,9 +149,9 @@ public class DaftarAntrianPasien extends JDialog implements ActionListener {
             //mencari object pasien berdasarakan noRM
             Pasien cari = Pasien.cariPasien(nikText.getText());
             //perulangan sebanyak indeks pada daftarpasien
-            for (int i = 0; i < Pasien.tambahPasienBaru.size(); i++) {
+            for (int i = 0; i < Pasien.daftarPasienKlinik.size(); i++) {
                 //perbandingan apabila object cari sama dengan object dari daftar pasie indeks ke i
-                if (cari == Pasien.tambahPasienBaru.get(i)) {
+                if (cari == Pasien.daftarPasienKlinik.get(i)) {
                     // menampilkan text pada jendela dialog
                     JOptionPane.showMessageDialog(null, "Nomor Antrian Anda : " + (i + 1));
                     //method agar jdialog langsung keluar 

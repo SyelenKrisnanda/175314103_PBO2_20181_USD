@@ -1,6 +1,6 @@
 package test;
 
-import MODEL.dokter;
+import MODEL.Dokter;
 import MODEL.Pasien;
 
 /*
@@ -17,15 +17,15 @@ public class main_test {
     public static void main(String[] args) {
         
         Pasien pas1 = new Pasien ("Syelen");
-        dokter dok1 = new dokter ("James");
+        Dokter dok1 = new Dokter ("James");
         
         
         try {
             pas1.setAlamat("Paingan");
-            pas1.setTempat_lahir("Lubuklinggau");
-            pas1.setTanggal_lahir(17);
-            pas1.setBulan_lahir(7);
-            pas1.setTahun_lahir(1999);
+            pas1.setTempatLahir("Lubuklinggau");
+            pas1.setTanggalLahir(17);
+            pas1.setBulanLahir(7);
+            pas1.setTahunLahir(1999);
             pas1.setNik("175314896");
             
             dok1.setNomorPegawai("147842");
@@ -40,8 +40,8 @@ public class main_test {
         System.out.println("---PASIEN---");
         System.out.println("Nama            :"+pas1.getNama());
         System.out.println("Alamat          :"+pas1.getAlamat());
-        System.out.println("Tempat Lahir    :"+pas1.getTempat_lahir());
-        System.out.println("Tanggal Lahir   :"+pas1.getTanggal_lahir()+pas1.getBulan_lahir()+pas1.getTahun_lahir());
+        System.out.println("Tempat Lahir    :"+pas1.getTempatLahir());
+        System.out.println("Tanggal Lahir   :"+pas1.getTanggalLahir()+pas1.getBulanLahir()+pas1.getTahunLahir());
         System.out.println("No Rekam Medis  :"+pas1.buatNomorRekamMedis());
         System.out.println("");
         
@@ -50,7 +50,7 @@ public class main_test {
          System.out.println("Nomor Pegawai  :"+dok1.getNomorPegawai());
         System.out.println("Alamat          :"+dok1.getAlamat());
         System.out.println("Tempat Lahir    :"+dok1.getTempat_lahir());
-        System.out.println("Tanggal Lahir   :"+dok1.getTanggal_lahir()+pas1.getBulan_lahir()+pas1.getTahun_lahir());
+        System.out.println("Tanggal Lahir   :"+dok1.getTanggal_lahir()+pas1.getBulanLahir()+pas1.getTahunLahir());
         
         
         }
