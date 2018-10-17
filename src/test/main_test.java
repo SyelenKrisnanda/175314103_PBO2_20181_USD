@@ -1,6 +1,6 @@
 package test;
 
-import MODEL.Dokter;
+import MODEL.dokter;
 import MODEL.Pasien;
 
 /*
@@ -17,7 +17,7 @@ public class main_test {
     public static void main(String[] args) {
         
         Pasien pas1 = new Pasien ("Syelen");
-        Dokter dok1 = new Dokter ("James");
+        dokter dok1 = new dokter ("James");
         
         
         try {

@@ -5,7 +5,15 @@
  */
 package MODEL;
 
+import MODEL.*;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -87,7 +95,7 @@ public class Pasien {
      * (noRekamMedis.length() >= 6) { this.noRekamMedis = noRekamMedis; } else {
      * throw new Exception("eror"); } }
      *
-     * @return 
+     * @return
      */
     public int getTanggalLahir() {//membuat method bernama getTanggal_lahir yang akan mereturn variabel bertipe data int
         return tanggalLahir;
@@ -155,4 +163,42 @@ public class Pasien {
         }
         return null;
     }
-}
+
+    public static void simpanDaftarPasien(File file) {
+        FileOutputStream fos = null;// buat objek stream yaitu fos
+
+        try {
+            fos = new FileOutputStream(file ,false); // ojek baru (fos) untuk tujuan
+            for (int i = 0; i < daftarPasienKlinik.size(); i++) {//berapa banyak data yang sudah ditambah
+                String data = daftarPasienKlinik.get(i).toString(); // toString ini suda ada nama dan alamat di ovveride
+                fos.write(data.getBytes());// untuk buat nulis di file.txt
+            }
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(Pasien.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IOException ex) {
+            Logger.getLogger(Pasien.class.getName()).log(Level.SEVERE, null, ex);
+        }finally{
+            try{
+                fos.close();
+            } catch (IOException ex) {
+                Logger.getLogger(Pasien.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }}
+
+    @Override
+    public String toString() {
+        return ("Pasien : " +"\t"+ nama +"\t"+ alamat + "\n") ;
+    }
+    
+    
+    public static void bacaDaftarPasien (File file) {
+        FileInputStream fis = null;
+    String hasil = "";
+    int data;
+        
+        
+    }
+        
+        
+    }
+    
